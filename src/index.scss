@@ -1,0 +1,63 @@
+$primary-color: #1c8294;
+$white-color: #fff;
+
+html, body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white-color;
+  background-color: $primary-color;
+  font-family: serif;
+
+  .app {
+
+    .title {
+      font-size: 56px;
+    }
+
+    #break-label {
+
+      .label {
+        font-size: 30px;
+      }
+
+      button {
+        font-size: 26px;
+        color: $white-color;
+      }
+
+      .length {
+        font-size: 26px;
+      }
+    }
+
+    #session-label {
+      @extend #break-label;
+    }
+
+    #timer {
+      width: fit-content;
+      margin-top: 20px;
+      padding: 12px 60px;
+      border: 5px solid darken($white-color, 75);
+      border-radius: 40px;
+
+      &-label {
+        font-size: 30px;
+      }
+
+      #time-left {
+        font-size: 60px;
+      }
+    }
+
+    #start_stop {
+      font-size: 30px;
+    }
+
+    #reset {
+      @extend #start_stop;
+    }
+  }
+}
